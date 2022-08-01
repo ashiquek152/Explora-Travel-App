@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:project_2/app/common.widgets/colors.dart';
-import 'package:project_2/app/common.widgets/text.customized.dart';
-import 'package:project_2/app/common.widgets/text_field_customized.dart';
 import 'package:project_2/app/modules/authentication/controllers/authentication_controller.dart';
-import 'package:project_2/app/modules/authentication/views/authentication_view.dart';
+import 'package:project_2/app/modules/widgets/colors.dart';
+import 'package:project_2/app/modules/widgets/text.customized.dart';
+import 'package:project_2/app/modules/widgets/text_field_customized.dart';
+
 
 class Signup extends StatelessWidget {
   Signup({Key? key}) : super(key: key);
@@ -24,13 +24,13 @@ class Signup extends StatelessWidget {
                 TextCustomized(
                   text: "EXPLORA",
                   textSize: 45.sp,
-                  textColor: amber,
+                  textColor: darkblue,
                   fontWeight: FontWeight.bold,
                 ),
                 TextCustomized(
                     text: "- IF NOT NOW, WHEN? -",
                     textSize: 16.sp,
-                    textColor: amber),
+                    textColor: darkblue),
                 SizedBox(height: 50.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30.h),
@@ -62,13 +62,13 @@ class Signup extends StatelessWidget {
                 SizedBox(height: 20.h),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.amber,
+                    primary: darkblue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
                   onPressed: () {
-                     Get.to(()=>const AuthenticationView());
+                     Get.back();
                   },
                   child: Padding(
                     padding:
@@ -82,7 +82,7 @@ class Signup extends StatelessWidget {
                 ),
                
                 SizedBox(height: 70.h),
-                const Icon(Icons.keyboard_arrow_up_sharp, size: 60, color: amber)
+                const Icon(Icons.keyboard_arrow_up_sharp, size: 60, color: darkblue)
               ],
             ),
           ),

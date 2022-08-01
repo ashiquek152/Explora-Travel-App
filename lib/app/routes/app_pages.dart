@@ -1,9 +1,21 @@
 import 'package:get/get.dart';
-import 'package:project_2/app/modules/authentication/views/authentication_view.dart';
 
 import '../modules/authentication/bindings/authentication_binding.dart';
+import '../modules/authentication/views/authentication_view.dart';
+import '../modules/bookmarks/bindings/bookmarks_binding.dart';
+import '../modules/bookmarks/views/bookmarks_view.dart';
+import '../modules/bottom_navigation/bindings/bottom_navigation_binding.dart';
+import '../modules/bottom_navigation/views/bottom_navigation_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/location.details/bindings/location_details_binding.dart';
+import '../modules/location.details/views/location_details_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
+import '../modules/select.location/bindings/select_location_binding.dart';
+import '../modules/select.location/views/select_location_view.dart';
+import '../modules/settings/bindings/settings_binding.dart';
+import '../modules/settings/views/settings_view.dart';
 import '../modules/splashscreen/bindings/splashscreen_binding.dart';
 import '../modules/splashscreen/views/splashscreen_view.dart';
 
@@ -22,13 +34,43 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.AUTHENTICATION,
-      page: () => const AuthenticationView (),
+      page: () => const AuthenticationView(),
       binding: AuthenticationBinding(),
     ),
     GetPage(
       name: _Paths.SPLASHSCREEN,
       page: () => const SplashscreenView(),
       binding: SplashscreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOM_NAVIGATION,
+      page: () => BottomNavigationView(),
+      binding: BottomNavigationBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOKMARKS,
+      page: () => const BookmarksView(),
+      binding: BookmarksBinding(),
+    ),
+    GetPage(
+      name: _Paths.SETTINGS,
+      page: () => const SettingsView(),
+      binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOCATION_DETAILS,
+      page: () => const LocationDetailsView(),
+      binding: LocationDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.SELECT_LOCATION,
+      page: () =>  SelectLocationView(),
+      binding: SelectLocationBinding(),
     ),
   ];
 }

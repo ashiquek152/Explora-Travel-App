@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:project_2/app/common.widgets/colors.dart';
-import 'package:project_2/app/common.widgets/text.customized.dart';
+
+import 'package:project_2/app/modules/authentication/controllers/authentication_controller.dart';
 import 'package:project_2/app/modules/authentication/views/login.dart';
 import 'package:project_2/app/modules/authentication/views/signup.dart';
+import 'package:project_2/app/modules/widgets/colors.dart';
+import 'package:project_2/app/modules/widgets/text.customized.dart';
 
-import '../controllers/authentication_controller.dart';
 
 class AuthenticationView extends GetView<AuthenticationController> {
   const AuthenticationView({Key? key}) : super(key: key);
@@ -35,20 +36,20 @@ class AuthenticationView extends GetView<AuthenticationController> {
                         TextCustomized(
                           text: "EXPLORA",
                           textSize: 45.r,
-                          textColor: amber,
+                          textColor: darkblue,
                           fontWeight: FontWeight.bold,
                         ),
                         TextCustomized(
                             text: "- IF NOT NOW, WHEN? -",
                             textSize: 16.r,
-                            textColor: amber),
+                            textColor: darkblue),
                         SizedBox(height: 50.h),
                         SizedBox(
                           height: 30.h,
 
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.amber,
+                              primary: darkblue,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
@@ -57,10 +58,10 @@ class AuthenticationView extends GetView<AuthenticationController> {
                               Get.to(()=> Login());
                             },
                             child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 12.h),
+                              padding: EdgeInsets.symmetric(horizontal: 15.h),
                               child: TextCustomized(
                                 text: "LOGIN",
-                                textSize: 16.r,
+                                textSize: 18.r,
                                 textColor: white,
                               ),
                             ),
@@ -71,7 +72,7 @@ class AuthenticationView extends GetView<AuthenticationController> {
                           height: 30.h,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.amber,
+                              primary: darkblue,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
@@ -83,7 +84,7 @@ class AuthenticationView extends GetView<AuthenticationController> {
                               padding: EdgeInsets.symmetric(horizontal: 12.h),
                               child: TextCustomized(
                                 text: "SIGN UP",
-                                textSize: 16.r,
+                                textSize: 18.r,
                                 textColor: white,
                               ),
                             ),

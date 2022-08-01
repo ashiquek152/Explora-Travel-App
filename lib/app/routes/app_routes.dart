@@ -6,6 +6,12 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const AUTHENTICATION = _Paths.AUTHENTICATION;
   static const SPLASHSCREEN = _Paths.SPLASHSCREEN;
+  static const BOTTOM_NAVIGATION = _Paths.BOTTOM_NAVIGATION;
+  static const BOOKMARKS = _Paths.BOOKMARKS;
+  static const SETTINGS = _Paths.SETTINGS;
+  static const NOTIFICATIONS = _Paths.NOTIFICATIONS;
+  static const LOCATION_DETAILS = _Paths.LOCATION_DETAILS;
+  static const SELECT_LOCATION = _Paths.SELECT_LOCATION;
 }
 
 abstract class _Paths {
@@ -13,4 +19,10 @@ abstract class _Paths {
   static const HOME = '/home';
   static const AUTHENTICATION = '/authentication';
   static const SPLASHSCREEN = '/splashscreen';
+  static const BOTTOM_NAVIGATION = '/bottom-navigation';
+  static const BOOKMARKS = '/bookmarks';
+  static const SETTINGS = '/settings';
+  static const NOTIFICATIONS = '/notifications';
+  static const LOCATION_DETAILS = '/location-details';
+  static const SELECT_LOCATION = '/select-location';
 }
