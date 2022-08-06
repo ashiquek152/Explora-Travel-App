@@ -20,16 +20,16 @@ class FavouritesView extends GetView<FavouritesController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: transparent,
-        elevation: 0,
-        // toolbarHeight: 40,
-        title: TextCustomized(
-          text: "Saved Places",
-          textSize: 25,
-          textColor: darkblue,
-          fontWeight: FontWeight.w900,
-        ),
+        centerTitle: true,
+        backgroundColor: white,
+        elevation: 0.1,
         automaticallyImplyLeading: false,
+        title: const TextCustomized(
+          text: "Favourites",
+          textSize: 20,
+          textColor: darkblue,
+          fontWeight:FontWeight.bold,
+        ),
       ),
       body: SafeArea(
         child: Stack(

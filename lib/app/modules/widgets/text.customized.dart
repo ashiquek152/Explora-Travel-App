@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextCustomized extends StatelessWidget {
-  TextCustomized(
+  const TextCustomized(
       {Key? key,
       required this.text,
       required this.textSize,
@@ -9,16 +9,16 @@ class TextCustomized extends StatelessWidget {
       this.textAlign = TextAlign.center,
       this.fontStyle = FontStyle.normal,
       this.fontWeight = FontWeight.normal,
-      this.fontFamily = "NotoSans"})
+      this.fontFamily = "Ubuntu"})
       : super(key: key);
 
   final String text;
   final double textSize;
   final Color textColor;
-  FontWeight fontWeight;
-  FontStyle fontStyle;
+  final FontWeight fontWeight;
+  final FontStyle fontStyle;
   final String fontFamily;
-  TextAlign textAlign;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+
+  final searchCtrlr =  TextEditingController();
+
 List<String> districtList = [
     "Trivandrum",
     "Kollam",
@@ -23,4 +27,5 @@ List<String> districtList = [
     index=newIdx;
     update();
   }
+
 }

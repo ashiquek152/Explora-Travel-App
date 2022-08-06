@@ -20,53 +20,53 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<BottomNavigationController>(
-      builder: (context) {
-        return Scaffold(
-          body: PageView(
-          
-            controller: _pageController,
-            children:   [
-              const HomeView(),
-              FavouritesView(),
-              const SettingsView(),
-              const NotificationsView()
-            ],
-            onPageChanged: (index) {
-              _bottomController.swithPageIndex(index);
-            },
-          ),
-          bottomNavigationBar: BottomBar(
-            selectedIndex: _bottomController.currentPage,
-            onTap: (int index) {
-              _pageController.jumpToPage(index);
-              _bottomController.swithPageIndex(index);
-            },
-            items:  <BottomBarItem>[
-               BottomBarItem(
-                icon: Icon(Icons.home,size: 25.r,),
-                title:  const Text('Home'),
-                activeColor:darkblue,
+    return GetBuilder<BottomNavigationController>(builder: (context) {
+      return Scaffold(
+        body: PageView(
+          controller: _pageController,
+          children: [
+             HomeView(),
+            FavouritesView(),
+              NotificationsView(),
+            const SettingsView()
+          ],
+          onPageChanged: (index) {
+            _bottomController.swithPageIndex(index);
+          },
+        ),
+        bottomNavigationBar: BottomBar(
+          selectedIndex: _bottomController.currentPage,
+          onTap: (int index) {
+            _pageController.jumpToPage(index);
+            _bottomController.swithPageIndex(index);
+          },
+          items: <BottomBarItem>[
+            BottomBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 25.r,
               ),
-               BottomBarItem(
-                icon: Icon(Icons.favorite,size: 25.r),
-                title: const Text('Favorites'),
-                activeColor: Colors.red,
-              ),
-               BottomBarItem(
-                icon: Icon(Icons.settings,size: 25.r),
-                title: const Text('Settings'),
-                activeColor: Colors.orange,
-              ),
-               BottomBarItem(
-                icon: Icon(Icons.notifications,size: 25.r),
-                title: const Text('Notifications'),
-                activeColor:blue,
-              ),
-            ],
-          ),
-        );
-      }
-    );
+              title:  const Text('Home'),
+              activeColor: darkblue,
+            ),
+            BottomBarItem(
+              icon: Icon(Icons.favorite, size: 25.r),
+              title: const Text('Favorites'),
+              activeColor: Colors.red,
+            ),
+            BottomBarItem(
+              icon: Icon(Icons.notifications, size: 25.r),
+              title: const Text('Inbox'),
+              activeColor: blue,
+            ),
+            BottomBarItem(
+              icon: Icon(Icons.settings, size: 25.r),
+              title: const Text('Settings'),
+              activeColor: Colors.orange,
+            ),
+          ],
+        ),
+      );
+    });
   }
 }

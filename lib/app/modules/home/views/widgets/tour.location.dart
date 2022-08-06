@@ -31,7 +31,7 @@ class TourLocationByDistrict extends StatelessWidget {
                   boxShadow: const [
                     BoxShadow(
                       color: black45,
-                      blurRadius: 2.0,
+                      blurRadius: 1.0,
                     ),
                   ],
                   image: DecorationImage(
@@ -47,10 +47,10 @@ class TourLocationByDistrict extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
+                          filter: ImageFilter.blur(sigmaX: 0.9, sigmaY: 0.9),
                           child: Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.0)))),
+                                  color: Colors.white.withOpacity(0.1)))),
                       Expanded(
                         flex: 0,
                         child: TextCustomized(
@@ -79,7 +79,7 @@ class TourLocationByDistrict extends StatelessWidget {
             ),
             Positioned(
               top: 280.h,
-              left: 70.w,
+              left: 60.w,
               child: SizedBox(
                 height: 60,
                 width: 150,

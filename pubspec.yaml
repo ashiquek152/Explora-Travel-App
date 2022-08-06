@@ -12,13 +12,11 @@ dependencies:
     sdk: flutter
   flutter_spinkit: ^5.1.0
   flutter_screenutil: ^5.5.3+2
-  google_fonts: ^3.0.1
   carousel_slider: ^4.1.1
   bottom_bar: ^2.0.2
   flutter_map: ^2.1.1
   google_maps_flutter: ^2.1.10
   geolocator: ^9.0.1
-  # geocoding: ^2.0.4
 
 dev_dependencies: 
   flutter_lints: 2.0.1
@@ -39,4 +37,7 @@ flutter:
         - asset: assets/fonts/RobotoMono.ttf
     - family: NotoSans
       fonts:
-        - asset: assets/fonts/NotoSans-Black.ttf    
+        - asset: assets/fonts/NotoSans-Thin.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf    
