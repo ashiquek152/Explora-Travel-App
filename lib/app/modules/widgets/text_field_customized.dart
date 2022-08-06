@@ -21,7 +21,6 @@ class TextFormFieldCustom extends StatelessWidget {
     return SizedBox(
       height: 40.h,
       child: TextFormField(
-        
         controller: fieldController,
         keyboardType: keyboardType,
         obscureText: hintText == "Password" || hintText == "Confirm password"
@@ -37,7 +36,8 @@ class TextFormFieldCustom extends StatelessWidget {
         autovalidateMode: AutovalidateMode.onUserInteraction,
         cursorColor: darkblue,
         decoration: InputDecoration(
-          contentPadding:  EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
           errorStyle: TextStyle(
             fontSize: 18.r,
             color: white.withOpacity(0.8),
@@ -62,7 +62,7 @@ class TextFormFieldCustom extends StatelessWidget {
   OutlineInputBorder textfieldBorderDecoration({color = darkblue}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(25.0),
-      borderSide:  BorderSide(
+      borderSide: BorderSide(
         color: darkblue,
         width: 2.0.h,
       ),

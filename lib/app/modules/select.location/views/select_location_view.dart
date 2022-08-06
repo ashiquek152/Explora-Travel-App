@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:project_2/app/modules/select.location/widgets/google.map.dart';
 import 'package:project_2/app/modules/widgets/colors.dart';
 import 'package:project_2/app/modules/widgets/text_field_customized.dart';
 
@@ -35,7 +36,7 @@ class SelectLocationView extends GetView<SelectLocationController> {
         child: ListView(
           children: [
             Row(
-              mainAxisAlignment:MainAxisAlignment.spaceEvenly ,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Expanded(
                   child: TextFormFieldCustom(
@@ -44,7 +45,8 @@ class SelectLocationView extends GetView<SelectLocationController> {
                     hintText: "Search here",
                     usingPageName: "Search",
                   ),
-                ),SizedBox(width: 5.w),
+                ),
+                SizedBox(width: 5.w),
                 CircleAvatar(
                   radius: 22,
                   backgroundColor: darkblue,
@@ -52,8 +54,13 @@ class SelectLocationView extends GetView<SelectLocationController> {
                     radius: 20,
                     backgroundColor: white,
                     child: IconButton(
-                        icon: const Icon(Icons.location_on_outlined,color: red,),
-                        onPressed: () {}),
+                        icon: const Icon(
+                          Icons.location_on_outlined,
+                          color: red,
+                        ),
+                        onPressed: () {
+                          Get.to(  MapSample());
+                        }),
                   ),
                 )
               ],

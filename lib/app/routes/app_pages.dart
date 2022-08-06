@@ -2,10 +2,10 @@ import 'package:get/get.dart';
 
 import '../modules/authentication/bindings/authentication_binding.dart';
 import '../modules/authentication/views/authentication_view.dart';
-import '../modules/bookmarks/bindings/bookmarks_binding.dart';
-import '../modules/bookmarks/views/bookmarks_view.dart';
 import '../modules/bottom_navigation/bindings/bottom_navigation_binding.dart';
 import '../modules/bottom_navigation/views/bottom_navigation_view.dart';
+import '../modules/favourites/bindings/favourites_binding.dart';
+import '../modules/favourites/views/favourites_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/location.details/bindings/location_details_binding.dart';
@@ -48,10 +48,10 @@ class AppPages {
       binding: BottomNavigationBinding(),
     ),
     GetPage(
-      name: _Paths.BOOKMARKS,
-      page: () => const BookmarksView(),
-      binding: BookmarksBinding(),
-    ),
+          name: _Paths.FAVOURITES,
+          page: () =>  FavouritesView(),
+          binding: FavouritesBinding(),
+        ),
     GetPage(
       name: _Paths.SETTINGS,
       page: () => const SettingsView(),
@@ -69,7 +69,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SELECT_LOCATION,
-      page: () =>  SelectLocationView(),
+      page: () => SelectLocationView(),
       binding: SelectLocationBinding(),
     ),
   ];

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TextCustomized extends StatelessWidget {
   TextCustomized(
@@ -7,10 +6,10 @@ class TextCustomized extends StatelessWidget {
       required this.text,
       required this.textSize,
       required this.textColor,
-      this.textAlign=TextAlign.center,
+      this.textAlign = TextAlign.center,
       this.fontStyle = FontStyle.normal,
       this.fontWeight = FontWeight.normal,
-      this.fontFamily = "RobotoMono"})
+      this.fontFamily = "NotoSans"})
       : super(key: key);
 
   final String text;
@@ -23,27 +22,31 @@ class TextCustomized extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: textAlign,
-      style: GoogleFonts.roboto(
-        color: textColor,
-        fontSize: textSize,
-        fontWeight: fontWeight,
-        fontStyle: fontStyle,
-        
-      ),
-    );
-
-    // Text(
+    // return Text(
     //   text,
-    //   style:  TextStyle(
+    //   overflow: TextOverflow.ellipsis,
+    //   maxLines: 2,
+    //   textAlign: textAlign,
+    //   style: GoogleFonts.roboto(
     //     color: textColor,
     //     fontSize: textSize,
     //     fontWeight: fontWeight,
     //     fontStyle: fontStyle,
-    //     fontFamily: fontFamily
+
     //   ),
     // );
+
+    return Text(
+      text,
+      maxLines: 2,
+      style: TextStyle(
+          overflow: TextOverflow.ellipsis,
+          color: textColor,
+          fontSize: textSize,
+          fontWeight: fontWeight,
+          fontStyle: fontStyle,
+          fontFamily: fontFamily,
+          ),
+    );
   }
 }

@@ -13,64 +13,68 @@ class DistrictsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider.builder(
-        itemCount: _homeController.districtList.length,
-        itemBuilder: (context, index, realIndex) {
-          final districtName = _homeController.districtList[index];
-          return Padding(
-            padding:  EdgeInsets.only(top: 8.0.h, bottom: 8.0.h),
-            child: Container(
-              padding: const EdgeInsets.all(10),
-              margin: EdgeInsets.symmetric(horizontal: 5.w),
-              decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                    color:grey,
-                    blurRadius: 6.0,
-                    blurStyle: BlurStyle.normal
-                  ),
-                ],
-                color: white,
-                borderRadius: BorderRadius.circular(20.r),
-              ),
-              child: Column(
-                children: [
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.r),
-                        color: white,
-                        image: DecorationImage(
-                            image: index % 2 == 0
-                                ? const AssetImage("assets/Auth Background.jpg")
-                                : const AssetImage(
-                                    "assets/Auth Background2.jpg"),
-                            fit: BoxFit.cover),
+    return Container(
+      margin: const EdgeInsets.all(10),
+      child: CarouselSlider.builder(
+          itemCount: _homeController.districtList.length,
+          itemBuilder: (context, index, realIndex) {
+            final districtName = _homeController.districtList[index];
+            return Padding(
+              padding:  EdgeInsets.only(top: 8.0.h, bottom: 8.0.h),
+              child: Container(
+                width: 130,
+                padding: EdgeInsets.all(10.r),
+                margin: EdgeInsets.symmetric(horizontal: 5.w),
+                decoration: BoxDecoration(
+                  boxShadow: const [
+                    BoxShadow(
+                      color:grey,
+                      blurRadius: 6.0,
+                      blurStyle: BlurStyle.normal
+                    ),
+                  ],
+                  color: white,
+                  borderRadius: BorderRadius.circular(20.r),
+                ),
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.r),
+                          color: white,
+                          image: DecorationImage(
+                              image: index % 2 == 0
+                                  ? const AssetImage("assets/Auth Background.jpg")
+                                  : const AssetImage(
+                                      "assets/Auth Background2.jpg"),
+                              fit: BoxFit.cover),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 10.h),
-                  Expanded(
-                    flex: 1,
-                    child: TextCustomized(
-                      text: districtName,
-                      textSize: 18.r,
-                      textColor: darkblue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-                ],
+                    SizedBox(height: 10.h),
+                    Expanded(
+                      flex: 1,
+                      child: TextCustomized(
+                        text: districtName,
+                        textSize: 14.sp,
+                        textColor: darkblue,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          );
-        },
-        options: CarouselOptions(
-            height: 160.h,
-            viewportFraction: 0.43,
-            autoPlay: false,
-            autoPlayInterval: const Duration(seconds: 3),
-            padEnds: true,
-            enlargeCenterPage: true));
+            );
+          },
+          options: CarouselOptions(
+              height: 150.h,
+              viewportFraction: 0.35,
+              autoPlay: false,
+              autoPlayInterval: const Duration(seconds: 3),
+              padEnds: true,
+              enlargeCenterPage: true)),
+    );
   }
 }

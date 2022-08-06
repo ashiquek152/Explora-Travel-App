@@ -43,12 +43,13 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SizedBox(
-                      height: 40.h,
-                      child: ElevatedButton.icon(
-                        onPressed: () => Get.to(() => SelectLocationView()),
-                        label: const Text("Location"),
-                        icon: const Icon(Icons.location_on_outlined),
-                      )),
+                    height: 40.h,
+                    child: ElevatedButton.icon(
+                      onPressed: () => Get.to(() => SelectLocationView()),
+                      label: const Text("Location"),
+                      icon: const Icon(Icons.location_on_outlined),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 10.h),

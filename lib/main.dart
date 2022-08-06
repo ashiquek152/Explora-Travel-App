@@ -15,7 +15,8 @@ void main() {
           getPages: AppPages.routes,
         );
       }),
-      designSize:const Size(414, 716) ,
+      designSize:const Size(414, 716),
+      splitScreenMode: true
     ),
   );
 }

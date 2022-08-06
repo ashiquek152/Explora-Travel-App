@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:project_2/app/modules/bookmarks/views/bookmarks_view.dart';
+import 'package:project_2/app/modules/favourites/views/favourites_view.dart';
 import 'package:project_2/app/modules/home/views/home_view.dart';
 import 'package:project_2/app/modules/notifications/views/notifications_view.dart';
 import 'package:project_2/app/modules/settings/views/settings_view.dart';
@@ -26,11 +26,11 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
           body: PageView(
           
             controller: _pageController,
-            children:  const [
-              HomeView(),
-              BookmarksView(),
-              SettingsView(),
-              NotificationsView()
+            children:   [
+              const HomeView(),
+              FavouritesView(),
+              const SettingsView(),
+              const NotificationsView()
             ],
             onPageChanged: (index) {
               _bottomController.swithPageIndex(index);
@@ -44,22 +44,22 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
             },
             items:  <BottomBarItem>[
                BottomBarItem(
-                icon: Icon(Icons.home,size: 35.w,),
+                icon: Icon(Icons.home,size: 25.r,),
                 title:  const Text('Home'),
                 activeColor:darkblue,
               ),
                BottomBarItem(
-                icon: Icon(Icons.favorite,size: 35.w),
+                icon: Icon(Icons.favorite,size: 25.r),
                 title: const Text('Favorites'),
                 activeColor: Colors.red,
               ),
                BottomBarItem(
-                icon: Icon(Icons.settings,size: 35.w),
+                icon: Icon(Icons.settings,size: 25.r),
                 title: const Text('Settings'),
                 activeColor: Colors.orange,
               ),
                BottomBarItem(
-                icon: Icon(Icons.notifications,size: 35.w),
+                icon: Icon(Icons.notifications,size: 25.r),
                 title: const Text('Notifications'),
                 activeColor:blue,
               ),

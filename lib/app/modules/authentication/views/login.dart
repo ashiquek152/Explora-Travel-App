@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:project_2/app/modules/authentication/controllers/authentication_controller.dart';
+import 'package:project_2/app/modules/authentication/views/signup.dart';
 import 'package:project_2/app/modules/bottom_navigation/views/bottom_navigation_view.dart';
 import 'package:project_2/app/modules/widgets/colors.dart';
 import 'package:project_2/app/modules/widgets/text.customized.dart';
@@ -58,17 +59,16 @@ class Login extends StatelessWidget {
                     width: 180.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary:darkblue,
+                        primary: darkblue,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
                       onPressed: () {
-                         Get.to(()=>BottomNavigationView());
+                        Get.to(() => BottomNavigationView());
                       },
                       child: Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10.h),
+                        padding: EdgeInsets.symmetric(vertical: 10.h),
                         child: TextCustomized(
                           text: "LOGIN",
                           textSize: 16.r,
@@ -79,17 +79,22 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 120.w,vertical:5.h ),
-                  child:  Divider(thickness: 2.h, color: darkblue),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 120.w, vertical: 5.h),
+                  child: Divider(thickness: 2.h, color: darkblue),
                 ),
                 SizedBox(height: 30.h),
-                TextCustomized(
-                  text: "CREATE AN ACCOUNT",
-                  textSize: 14.r,
-                  textColor: grey,
+                GestureDetector(
+                  onTap: () => Get.to(() => Signup()),
+                  child: TextCustomized(
+                    text: "CREATE AN ACCOUNT",
+                    textSize: 14.r,
+                    textColor: grey,
+                  ),
                 ),
                 SizedBox(height: 100.h),
-                const Icon(Icons.keyboard_arrow_up_sharp, size: 60, color: darkblue)
+                const Icon(Icons.keyboard_arrow_up_sharp,
+                    size: 60, color: darkblue)
               ],
             ),
           ),
