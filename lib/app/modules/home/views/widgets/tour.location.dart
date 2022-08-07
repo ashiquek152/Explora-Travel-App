@@ -39,7 +39,8 @@ class TourLocationByDistrict extends StatelessWidget {
                         ? const AssetImage("assets/Auth Background.jpg")
                         : const AssetImage("assets/kerala1.jpg"),
                     fit: BoxFit.cover,
-                  ),
+                  )
+                  ..colorFilter,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -79,7 +80,7 @@ class TourLocationByDistrict extends StatelessWidget {
             ),
             Positioned(
               top: 280.h,
-              left: 60.w,
+              left: 80.w,
               child: SizedBox(
                 height: 60,
                 width: 150,
@@ -109,85 +110,13 @@ class TourLocationByDistrict extends StatelessWidget {
         );
       },
       options: CarouselOptions(
+        pauseAutoPlayOnManualNavigate: true,
         height: 350.h,
-        viewportFraction: 0.7,
+        viewportFraction: 0.8,
         autoPlay: true,
-        // autoPlayInterval: const Duration(seconds: 5),
         padEnds: true,
         enlargeCenterPage: true,
       ),
     );
   }
 }
-
-
-
-
-
-
-// Padding(
-//       padding: const EdgeInsets.all(25.0),
-//       child: CarouselSlider.builder(
-//         options: CarouselOptions(
-//           height:400,
-//           viewportFraction: 0.7,
-//           // autoPlay: true,
-//           // autoPlayInterval: const Duration(seconds: 5),
-//           padEnds: true,
-//           enlargeCenterPage: true,
-//         ),
-//         itemCount: _homeController.districtList.length,
-//         itemBuilder: (context, index, realIndex) {
-//           final districtName = _homeController.districtList[index];
-//           return SizedBox(
-//             child: Stack(
-//               fit: StackFit.expand,
-//               children: [
-//                 Image.asset('assets/Auth Background.jpg', fit: BoxFit.cover),
-//                 ClipRRect(
-//                   // Clip it cleanly.
-//                   child: BackdropFilter(
-//                     filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-//                     child: Container(
-//                       color: Colors.grey.withOpacity(0.1),
-//                       alignment: Alignment.center,
-//                       child: Column(
-//                         children: [
-//                           const Expanded(flex: 1, child: SizedBox()),
-//                           TextCustomized(
-//                             text: districtName,
-//                             textSize: 18.r,
-//                             textColor: white,
-//                           ),
-//                           const SizedBox(height: 10),
-//                           Expanded(
-//                             flex: 1,
-//                             child: TextCustomized(
-//                               text:
-//                                   "Lorem Ipsum is simply dummy text of the Lorem of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sincambled it to make a type recimen book. book.",
-//                               textSize: 16.r,
-//                               textColor: white,
-//                             ),
-//                           ),
-//                         ],
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//                 Positioned(
-//                   top: 300,
-//                   left: 100,
-//                   child: Container(
-//                     color: red,
-//                     height: 100,
-//                     width: 100,
-//                   ),
-//                 )
-//               ],
-//             ),
-//           );
-
-          
-//         },
-//       ),
-//     );

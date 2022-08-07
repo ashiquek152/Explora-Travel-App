@@ -12,6 +12,8 @@ import '../modules/location.details/bindings/location_details_binding.dart';
 import '../modules/location.details/views/location_details_view.dart';
 import '../modules/notifications/bindings/notifications_binding.dart';
 import '../modules/notifications/views/notifications_view.dart';
+import '../modules/rooms.nearby/bindings/rooms_nearby_binding.dart';
+import '../modules/rooms.nearby/views/rooms_nearby_view.dart';
 import '../modules/select.location/bindings/select_location_binding.dart';
 import '../modules/select.location/views/select_location_view.dart';
 import '../modules/settings/bindings/settings_binding.dart';
@@ -29,7 +31,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () =>  HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -48,10 +50,10 @@ class AppPages {
       binding: BottomNavigationBinding(),
     ),
     GetPage(
-          name: _Paths.FAVOURITES,
-          page: () =>  FavouritesView(),
-          binding: FavouritesBinding(),
-        ),
+      name: _Paths.FAVOURITES,
+      page: () => FavouritesView(),
+      binding: FavouritesBinding(),
+    ),
     GetPage(
       name: _Paths.SETTINGS,
       page: () => const SettingsView(),
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.SELECT_LOCATION,
       page: () => SelectLocationView(),
       binding: SelectLocationBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROOMS_NEARBY,
+      page: () =>  RoomsNearbyView(),
+      binding: RoomsNearbyBinding(),
     ),
   ];
 }

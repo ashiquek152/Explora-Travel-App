@@ -12,6 +12,7 @@ abstract class Routes {
   static const NOTIFICATIONS = _Paths.NOTIFICATIONS;
   static const LOCATION_DETAILS = _Paths.LOCATION_DETAILS;
   static const SELECT_LOCATION = _Paths.SELECT_LOCATION;
+  static const ROOMS_NEARBY = _Paths.ROOMS_NEARBY;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const NOTIFICATIONS = '/notifications';
   static const LOCATION_DETAILS = '/location-details';
   static const SELECT_LOCATION = '/select-location';
+  static const ROOMS_NEARBY = '/rooms-nearby';
 }
