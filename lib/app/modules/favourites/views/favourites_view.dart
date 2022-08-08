@@ -1,15 +1,15 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:project_2/app/modules/favourites/widgets/favourites.hotels.list.dart';
+import 'package:project_2/app/modules/favourites/widgets/favourites.locations.list.dart';
 import 'package:project_2/app/modules/widgets/animated.button.dart';
+import 'package:project_2/app/modules/widgets/colors.dart';
 import 'package:project_2/app/modules/widgets/text.customized.dart';
 import 'package:project_2/app/modules/widgets/text_field_customized.dart';
+
 import '../controllers/favourites_controller.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_2/app/modules/widgets/colors.dart';
 
 class FavouritesView extends GetView<FavouritesController> {
   FavouritesView({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class FavouritesView extends GetView<FavouritesController> {
       body: SafeArea(
         child: Stack(
           children: [
-            const FavouriteHotelList(),
+            const FavouriteLocationsList(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
