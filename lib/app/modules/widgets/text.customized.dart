@@ -6,10 +6,11 @@ class TextCustomized extends StatelessWidget {
       required this.text,
       required this.textSize,
       required this.textColor,
+       this.maxlines=2,
       this.textAlign = TextAlign.center,
       this.fontStyle = FontStyle.normal,
       this.fontWeight = FontWeight.normal,
-      this.fontFamily = "Ubuntu"})
+      this.fontFamily = "Ubuntu", })
       : super(key: key);
 
   final String text;
@@ -19,6 +20,7 @@ class TextCustomized extends StatelessWidget {
   final FontStyle fontStyle;
   final String fontFamily;
   final TextAlign textAlign;
+  final int maxlines;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class TextCustomized extends StatelessWidget {
 
     return Text(
       text,
-      maxLines: 2,
+      maxLines: maxlines,
       style: TextStyle(
           overflow: TextOverflow.ellipsis,
           color: textColor,

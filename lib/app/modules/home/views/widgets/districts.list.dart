@@ -45,10 +45,8 @@ class DistrictsList extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.r),
                           color: white,
                           image: DecorationImage(
-                              image: index % 2 == 0
-                                  ? const AssetImage("assets/Auth Background.jpg")
-                                  : const AssetImage(
-                                      "assets/Auth Background2.jpg"),
+                              image:  
+                                   AssetImage(index.isOdd? "assets/Auth Background.jpg":"assets/kerala1.jpg"),
                               fit: BoxFit.cover),
                         ),
                       ),

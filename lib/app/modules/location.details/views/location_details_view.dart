@@ -8,12 +8,13 @@ import 'package:project_2/app/modules/widgets/text.customized.dart';
 import '../controllers/location_details_controller.dart';
 
 class LocationDetailsView extends GetView<LocationDetailsController> {
-  const LocationDetailsView(
+  LocationDetailsView(
       {Key? key, this.locationName = "Not available", this.image = ""})
       : super(key: key);
 
   final String locationName;
   final String image;
+  final locationDtlsController = Get.put(LocationDetailsController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,13 +61,36 @@ class LocationDetailsView extends GetView<LocationDetailsController> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 25.h),
-            child: IconButton(
-              onPressed: () => Get.back(),
-              icon: Icon(
-                Icons.arrow_back_ios,
-                size: 35.h,
-                color: darkblue,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () => Get.back(),
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 35.h,
+                    color: darkblue,
+                  ),
+                ),
+                Obx(
+                  () => IconButton(
+                    onPressed: () {
+                      locationDtlsController.addToFavourite();
+                    },
+                    icon: locationDtlsController.isFav.value == false
+                        ? Icon(
+                            Icons.favorite_outline,
+                            size: 35.h,
+                            color: grey,
+                          )
+                        : Icon(
+                            Icons.favorite_rounded,
+                            size: 35.h,
+                            color: red,
+                          ),
+                  ),
+                )
+              ],
             ),
           ),
           Column(
@@ -125,7 +149,7 @@ class LocationDetailsView extends GetView<LocationDetailsController> {
                                 primary: darkblue,
                               ),
                               onPressed: () {
-                                Get.to( RoomsNearbyView());
+                                Get.to(RoomsNearbyView());
                               },
                               child: TextCustomized(
                                 text: "Look for rooms here",

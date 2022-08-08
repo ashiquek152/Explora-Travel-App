@@ -36,12 +36,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.AUTHENTICATION,
-      page: () => const AuthenticationView(),
+      page: () =>  AuthenticationView(),
       binding: AuthenticationBinding(),
     ),
     GetPage(
       name: _Paths.SPLASHSCREEN,
-      page: () => const SplashscreenView(),
+      page: () =>  SplashscreenView(),
       binding: SplashscreenBinding(),
     ),
     GetPage(
@@ -56,17 +56,17 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SETTINGS,
-      page: () => const SettingsView(),
+      page: () =>  SettingsView(),
       binding: SettingsBinding(),
     ),
     GetPage(
       name: _Paths.NOTIFICATIONS,
-      page: () => const NotificationsView(),
+      page: () =>  NotificationsView(),
       binding: NotificationsBinding(),
     ),
     GetPage(
       name: _Paths.LOCATION_DETAILS,
-      page: () => const LocationDetailsView(),
+      page: () =>  LocationDetailsView(),
       binding: LocationDetailsBinding(),
     ),
     GetPage(

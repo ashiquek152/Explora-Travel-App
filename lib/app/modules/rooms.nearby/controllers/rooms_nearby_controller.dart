@@ -22,8 +22,8 @@ class RoomsNearbyController extends GetxController {
 
   final searchRoomsCtrl = TextEditingController();
 
-  double currentDistance = 5;
-  double currentAmount = 10;
+  double currentDistance = 3;
+  double currentAmount = 6;
 
 
   distanceFilter(value){

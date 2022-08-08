@@ -35,7 +35,7 @@ class FavouriteHotelList extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15.r),
                         image: DecorationImage(
                             image: AssetImage(
-                                "assets/hotels/hotel${index + 1}.jpg"),
+                                index.isEven?"assets/Auth Background.jpg":"assets/kerala1.jpg"),
                             fit: BoxFit.cover),
                       ),
                     ),
@@ -47,7 +47,7 @@ class FavouriteHotelList extends StatelessWidget {
                         children: [
                           TextCustomized(
                             textAlign: TextAlign.start,
-                            text: "Hotel Name",
+                            text: "Tourist spot name",
                             textSize: 14.sp,
                             textColor: darkblue,
                             fontWeight: FontWeight.bold,
@@ -56,30 +56,20 @@ class FavouriteHotelList extends StatelessWidget {
                             width: 180.w,
                             child: TextCustomized(
                               textAlign: TextAlign.start,
-                              text:
-                                  "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+                              text: "Location details",
                               textSize: 12.sp,
                               textColor: black45,
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextCustomized(
-                                  textAlign: TextAlign.start,
-                                  text: "4.5 km",
-                                  textSize: 14,
-                                  textColor: grey),
-                              TextCustomized(
-                                  textAlign: TextAlign.start,
-                                  text: "7.6 🌟",
-                                  textSize: 14,
-                                  textColor: grey),
-                            ],
-                          ),
                         ],
                       ),
-                    )
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon:const Icon(
+                          Icons.favorite,
+                          color: red,
+                        ))
                   ],
                 ),
               ),

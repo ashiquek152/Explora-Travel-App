@@ -35,12 +35,11 @@ class TourLocationByDistrict extends StatelessWidget {
                     ),
                   ],
                   image: DecorationImage(
-                    image: index % 2 == 0
-                        ? const AssetImage("assets/Auth Background.jpg")
-                        : const AssetImage("assets/kerala1.jpg"),
+                    image: AssetImage(index.isOdd
+                        ? "assets/Auth Background.jpg"
+                        : "assets/kerala1.jpg"),
                     fit: BoxFit.cover,
-                  )
-                  ..colorFilter,
+                  )..colorFilter,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -68,6 +67,8 @@ class TourLocationByDistrict extends StatelessWidget {
                           text:
                               "Lorem Ipsum is simply dummy text of the Lorem of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sincambled it to make a type recimen book. book.",
                           textSize: 14.r,
+                          textAlign: TextAlign.center, 
+                          maxlines: 4,
                           textColor: white,
                           fontWeight: FontWeight.bold,
                         ),
@@ -96,12 +97,14 @@ class TourLocationByDistrict extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                   onPressed: () {
-                    Get.to(() => LocationDetailsView(
-                          locationName: districtName,
-                          image: index % 2 == 0
-                              ? "assets/Auth Background.jpg"
-                              : "assets/Auth Background2.jpg",
-                        ));
+                    Get.to(
+                      () => LocationDetailsView(
+                        locationName: districtName,
+                        image: index.isOdd
+                            ? "assets/Auth Background.jpg"
+                            : "assets/kerala1.jpg",
+                      ),
+                    );
                   },
                 ),
               ),
