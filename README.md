@@ -1,16 +1,8 @@
-# project_2
+# Explora travel app
 
-A new Flutter project.
+Hotel booking assistance.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Here I am about to start another project . This application will give a brief description about tourist locations and also details about the rooms nearby the spot. Also the data flow is managed with REST API.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Planned to complete the project within the next 3 weeks.
